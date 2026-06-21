@@ -8,7 +8,7 @@ public final class Money extends ValueObject<BigDecimal> {
     }
 
     public Money add(Money money) {
-        return new Money(value.add(value));
+        return new Money(value.add(money.value));
     }
 
     public Money add(BigDecimal value) {
