@@ -14,4 +14,8 @@ public final class BrandId extends PositiveNumericValueObject<Long> {
     protected String getNegativeValueErrorMessage() {
         return "BrandId value cannot be negative";
     }
+
+    public static BrandId create(Long value) {
+        return new BrandId(value);
+    }
 }
