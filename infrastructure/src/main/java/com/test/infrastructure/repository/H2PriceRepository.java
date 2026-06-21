@@ -10,7 +10,7 @@ import com.test.domain.model.Price;
 import com.test.domain.ports.output.PriceRepository;
 import com.test.domain.valueobject.BrandId;
 import com.test.domain.valueobject.ProductId;
-import com.test.infrastructure.mapper.PriceDateMapper;
+import com.test.infrastructure.mapper.PriceDataMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,9 +23,9 @@ public final class H2PriceRepository implements PriceRepository {
     @Override
     public Price findPriceByBrandIdAndProductIdAndApplicationDate(BrandId brandId, ProductId productId,
             LocalDateTime applicationDate) {
-        return priceJpaRepository.findByBrandidAndProductIdAndStartDateAndEndDate(brandId.getValue(),
+        return priceJpaRepository.findByBrandIdAndProductIdAndStartDateAndEndDate(brandId.getValue(),
                 productId.getValue(), applicationDate)
-                .map(PriceDateMapper::toDomainModel)
+                .map(PriceDataMapper::toDomainModel)
                 .orElseThrow(() -> new PriceNotFoundException("Price not found"));
     }
 }

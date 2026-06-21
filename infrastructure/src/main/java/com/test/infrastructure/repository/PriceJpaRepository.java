@@ -11,6 +11,6 @@ import com.test.infrastructure.entity.PriceEntityId;
 
 public interface PriceJpaRepository extends JpaRepository<PriceEntity, PriceEntityId> {
     @Query("SELECT p FROM PriceEntity p WHERE p.brandId = ?1 AND p.productId = ?2 AND p.startDate <= ?3 AND p.endDate >= ?3 ORDER BY p.priority DESC limit 1")
-    Optional<PriceEntity> findByBrandidAndProductIdAndStartDateAndEndDate(Long brandId, Long productId,
+    Optional<PriceEntity> findByBrandIdAndProductIdAndStartDateAndEndDate(Long brandId, Long productId,
             LocalDateTime date);
 }
