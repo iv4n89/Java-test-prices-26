@@ -2,7 +2,7 @@ package util;
 
 import java.math.BigDecimal;
 
-import com.test.valueObject.Money;
+import com.test.valueobject.Money;
 
 public final class MoneyMother {
     public static Money create(BigDecimal value) {

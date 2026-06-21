@@ -1,6 +1,6 @@
 package util;
 
-import com.test.valueObject.ProductId;
+import com.test.valueobject.ProductId;
 
 public final class ProductIdMother {
     public static ProductId create(Long value) {

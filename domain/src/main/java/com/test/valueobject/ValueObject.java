@@ -1,4 +1,4 @@
-package com.test.valueObject;
+package com.test.valueobject;
 
 import java.util.Objects;
 

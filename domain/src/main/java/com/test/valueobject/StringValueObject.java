@@ -1,4 +1,4 @@
-package com.test.valueObject;
+package com.test.valueobject;
 
 public abstract class StringValueObject extends ValueObject<String> {
     protected StringValueObject(String value) {

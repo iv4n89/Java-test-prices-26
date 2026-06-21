@@ -1,4 +1,4 @@
-package com.test.valueObject;
+package com.test.valueobject;
 
 public abstract class PositiveNumericValueObject<T> extends ValueObject<T> {
     protected PositiveNumericValueObject(T value) {

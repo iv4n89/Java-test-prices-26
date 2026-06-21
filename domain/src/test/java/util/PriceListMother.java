@@ -1,6 +1,6 @@
 package util;
 
-import com.test.valueObject.PriceList;
+import com.test.valueobject.PriceList;
 
 public final class PriceListMother {
     public static PriceList create(Long value) {

@@ -5,12 +5,12 @@ import java.util.Objects;
 
 import com.test.AggregateRoot;
 import com.test.exceptions.PriceDomainException;
-import com.test.valueObject.ProductId;
-import com.test.valueObject.BrandId;
-import com.test.valueObject.Currency;
-import com.test.valueObject.Money;
-import com.test.valueObject.PriceList;
-import com.test.valueObject.Priority;
+import com.test.valueobject.BrandId;
+import com.test.valueobject.Currency;
+import com.test.valueobject.Money;
+import com.test.valueobject.PriceList;
+import com.test.valueobject.Priority;
+import com.test.valueobject.ProductId;
 
 public final class Price implements AggregateRoot {
     private final ProductId productId;

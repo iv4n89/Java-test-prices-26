@@ -1,6 +1,6 @@
 package util;
 
-import com.test.valueObject.Priority;
+import com.test.valueobject.Priority;
 
 public final class PriorityMother {
     public static Priority create(Integer value) {

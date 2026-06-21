@@ -3,12 +3,12 @@ package util;
 import java.time.LocalDateTime;
 
 import com.test.model.Price;
-import com.test.valueObject.BrandId;
-import com.test.valueObject.Currency;
-import com.test.valueObject.Money;
-import com.test.valueObject.PriceList;
-import com.test.valueObject.Priority;
-import com.test.valueObject.ProductId;
+import com.test.valueobject.BrandId;
+import com.test.valueobject.Currency;
+import com.test.valueobject.Money;
+import com.test.valueobject.PriceList;
+import com.test.valueobject.Priority;
+import com.test.valueobject.ProductId;
 
 public final class PriceMother {
     public static Price from(
