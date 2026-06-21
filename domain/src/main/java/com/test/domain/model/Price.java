@@ -45,7 +45,7 @@ public final class Price implements AggregateRoot {
         return this.priority.getValue() - price.priority.getValue();
     }
 
-    public ProductId getgProductId() {
+    public ProductId getProductId() {
         return this.productId;
     }
 
