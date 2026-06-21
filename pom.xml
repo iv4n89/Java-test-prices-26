@@ -96,6 +96,17 @@
 				<version>${project.version}</version>
 				<type>test-jar</type>
 			</dependency>
+			<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>infrastructure</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>infrastructure</artifactId>
+				<version>${project.version}</version>
+				<type>test-jar</type>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
