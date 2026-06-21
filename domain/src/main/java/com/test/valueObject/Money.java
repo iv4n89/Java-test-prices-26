@@ -64,7 +64,7 @@ public final class Money extends ValueObject<BigDecimal> {
     }
 
     private void isNotNegative() {
-        if (this.isGreaterThanZero()) {
+        if (!this.isGreaterThanZero()) {
             throw new IllegalArgumentException("The value of money cannot be negative");
         }
     }
