@@ -1,0 +1,19 @@
+# syntax=docker/dockerfile:1.7
+
+FROM maven:3.9-eclipse-temurin-26
+WORKDIR /build
+
+COPY pom.xml ./
+COPY domain/pom.xml domain/
+COPY application/pom.xml application/
+COPY infrastructure/pom.xml infrastructure/
+COPY presentation/pom.xml presentation/
+
+RUN mvn -B -q -ntp dependency:go-offline
+
+COPY domain domain
+COPY application application
+COPY infrastructure infrastructure
+COPY presentation presentation
+
+CMD ["mvn", "-B", "-ntp", "-pl", "presentation", "-am", "verify"]
