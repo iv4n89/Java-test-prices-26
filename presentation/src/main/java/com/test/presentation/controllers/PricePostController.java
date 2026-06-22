@@ -6,6 +6,7 @@ import com.test.domain.model.Price;
 import com.test.domain.valueobject.BrandId;
 import com.test.domain.valueobject.ProductId;
 import com.test.presentation.dto.PriceFinderRequest;
+import com.test.presentation.dto.PriceResponse;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,12 +23,13 @@ public class PricePostController {
     private final PriceFinder priceFinder;
 
     @PostMapping("/find")
-    public ResponseEntity<Price> findPrice(@RequestBody PriceFinderRequest request) {
+    public ResponseEntity<PriceResponse> findPrice(@RequestBody PriceFinderRequest request) {
         PriceFinderCommand command = new PriceFinderCommand(
                 BrandId.create(request.brandId()),
                 ProductId.create(request.productId()),
                 request.date());
 
-        return ResponseEntity.ok(priceFinder.findPrice(command));
+        Price price = priceFinder.findPrice(command);
+        return ResponseEntity.ok(PriceResponse.fromDomain(price));
     }
 }
